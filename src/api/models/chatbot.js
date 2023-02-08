@@ -1,11 +1,15 @@
 const client = require('src/config/mongoDatabase');
 
 const Chatbot = new client.Schema({
-    name: {
+    id: {
+        type: String,
+        required: false
+    },
+    persona: {
         type: String,
         required: true
     },
-    cliente: {
+    client: {
         type: String,
         required: true
     }

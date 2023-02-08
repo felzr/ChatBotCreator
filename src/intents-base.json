@@ -1,0 +1,57 @@
+{
+  "intents": [{
+    "tag": "saudação",
+    "patterns": ["Oi", "Como vai você", "Tem alguém aí?", "Olá", "Bom dia"],
+    "responses": ["Olá, obrigado pela visita", "Bom te ver de novo", "Olá, como posso ajudar?"],
+    "context_set": ""
+  },
+    {
+      "tag": "adeus",
+      "patterns": ["Tchau", "Até logo", "Tchau"],
+      "responses": ["Até logo, obrigado pela visita", "Tenha um bom dia", "Tchau! Volte em breve."]
+    },
+    {
+      "tag": "obrigado",
+      "patterns": ["Obrigado", "Obrigado", "Isso é útil"],
+      "responses": ["Prazer em ajudar!", "A qualquer hora!", "É um prazer"]
+    },
+    {
+      "tag": "horas",
+      "patterns": ["Que horas você está aberto?", "Qual é o seu horário?", "Quando você está aberto?"],
+      "responses": ["Estamos abertos todos os dias das 9h às 21h", "Nosso horário é das 9h às 21h todos os dias"]
+    },
+    {
+      "tag": "motos",
+      "patterns": ["Quais motos você tem?", "Que tipos de motos existem?", "O que você aluga?"],
+      "responses": ["Alugamos motos Yamaha, Suzuki e Honda"]
+    },
+    {
+      "tag": "pagamentos",
+      "patterns": ["Vocês aceitam cartões de crédito?", "Vocês aceitam Mastercard?", "Vocês aceitam apenas dinheiro?"],
+      "responses": ["Aceitamos VISA, Mastercard e AMEX", "Aceitamos a maioria dos principais cartões de crédito"]
+    },
+    {
+      "tag": "aberto hoje",
+      "patterns": ["Você está aberto hoje?", "Quando você abre hoje?", "Qual é o seu horário hoje?"],
+      "responses": ["Estamos abertos todos os dias das 9h às 21h", "Nosso horário é das 9h às 21h todos os dias"]
+    },
+    {
+      "tag": "aluguel",
+      "patterns": ["Podemos alugar um ciclomotor?", "Gostaria de alugar um ciclomotor", "Como funciona?"],
+      "responses": ["Você pretende alugar hoje ou no final desta semana?"],
+      "context_set": "dia_aluguel"
+    },
+    {
+      "tag": "hoje",
+      "patterns": ["hoje"],
+      "responses": ["Para aluguéis hoje, ligue para 1-800-MYMOPED", "Aluguéis no mesmo dia, ligue para 1-800-MYMOPED"],
+      "context_filter": "dia_aluguel"
+    },
+    {
+      "tag": "final de semana",
+      "patterns": ["final de semana","fds"],
+      "responses": ["Para no final de semena ligue 9999999999999, no fds ligue para 1-800-MYMOPED"],
+      "context_filter": "dia_aluguel"
+    }
+  ]
+}
