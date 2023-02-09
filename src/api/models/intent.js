@@ -18,11 +18,13 @@ const Intent = new client.Schema({
         required: false
     },
     contextSet: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Context',
         required: false
     },
     contextFilter: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Context',
         required: false
     },
     conversation: {
